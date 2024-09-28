@@ -1,0 +1,114 @@
+.header-block {
+	&__label {
+		color: $accentColor;
+		font-family: $titleFontFamily, sans-serif;
+		letter-spacing: toRem(6.88);
+
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	&__text {
+	}
+
+	&__actions {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+}
+
+.title {
+	color: #fff;
+	font-family: $titleFontFamily, sans-serif;
+	@include adaptiveValue('font-size', 40, 30);
+	font-weight: 400;
+	line-height: 1;
+}
+
+.button {
+	display: inline-block;
+	padding: toRem(7) toRem(30);
+	border: toRem(1) solid $accentColor;
+	border-radius: toRem(100);
+	color: #fff;
+	font-family: $titleFontFamily, font-family;
+	font-size: toRem(16);
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: toRem(6.88);
+	text-align: center;
+
+	&:active {
+		background-color: $accentColor;
+	}
+
+	@media (any-hover: hover) {
+		transition: background-color 0.3s ease;
+
+		&:hover {
+			background-color: $accentColor;
+		}
+	}
+
+	&--big {
+		padding: toRem(7) toRem(52);
+	}
+}
+
+.section {
+	@include adaptiveValue('padding-top', 100, 40);
+}
+
+.section-link {
+	position: relative;
+	padding-right: toRem(30);
+	font-weight: 400;
+	font-family: $titleFontFamily, sans-serif;
+	line-height: normal;
+	letter-spacing: toRem(6.88);
+	transition: all 0.3 ease-in-out;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		width: toRem(14);
+		height: toRem(14);
+		background: url('@img/icons/arrow.svg');
+	}
+
+	@media (any-hover: hover) {
+		transition: transform 0.3s ease-in-out;
+
+		&:hover {
+			transform: translate(0, toRem(-5));
+		}
+	}
+}
+
+.logo {
+	letter-spacing: toRem(6.88);
+	line-height: normal;
+
+	@media (any-hover: hover) {
+		transition: color 0.3s ease-in-out;
+
+		&:hover {
+			color: $accentColor;
+		}
+	}
+}
+
+.hidden-text {
+	font-size: 0;
+}

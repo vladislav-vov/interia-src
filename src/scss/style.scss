@@ -1,0 +1,69 @@
+@use 'sass:math';
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Nunito&display=swap');
+
+@import 'base/vars';
+@import 'base/mixins';
+@import 'base/null';
+@import 'base/menu';
+@import 'base/forms/rating';
+@import 'base/forms/input';
+@import 'base/forms/forms';
+
+body {
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+	.loaded & {
+	}
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	@supports (overflow: clip) {
+		overflow: clip;
+	}
+
+	> main {
+		flex: 1 1 auto;
+	}
+
+	> * {
+		min-width: 0;
+	}
+}
+
+[class*='__container'] {
+	@if ($maxWidthContainer>0) {
+		max-width: toRem($containerWidth);
+		margin: 0 auto;
+	}
+	@if ($containerPadding>0) {
+		@if ($maxWidthContainer>0) {
+			padding: 0 toRem(math.div($containerPadding, 2));
+		} @else {
+			@include adaptiveValue(
+				'padding-left',
+				math.div($containerPadding, 2),
+				15
+			);
+			@include adaptiveValue(
+				'padding-right',
+				math.div($containerPadding, 2),
+				15
+			);
+		}
+	}
+}
+
+@import 'common';
+
+@import 'header';
+@import 'footer';
+
+@import 'home';

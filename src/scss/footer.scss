@@ -1,0 +1,168 @@
+.footer {
+	&__body {
+		@include adaptiveValue('padding-top', 130, 30);
+		@include adaptiveValue('padding-bottom', 150, 40);
+		background-color: $darkColor;
+	}
+
+	&__container {
+	}
+
+	&__body-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: toRem(20);
+		@include adaptiveValue('padding-bottom', 70, 20);
+		@include adaptiveValue('margin-bottom', 90, 30);
+		border-bottom: toRem(1) solid $accentColor;
+
+		@media (max-width: $mobile) {
+			flex-direction: column-reverse;
+			gap: toRem(30);
+		}
+	}
+
+	&__menu {
+	}
+
+	&__menu-list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: toRem(20) toRem(55);
+
+		@media (max-width: $mobile) {
+			justify-content: center;
+		}
+
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+		}
+	}
+
+	&__menu-item {
+	}
+
+	&__menu-link {
+		@media (any-hover: hover) {
+			transition: color 0.3s ease-in-out;
+
+			&:hover {
+				color: $accentColor;
+			}
+		}
+
+		@media (max-width: $mobileSmall) {
+			padding: toRem(10) toRem(40);
+			font-size: toRem(20);
+		}
+	}
+
+	&__logo {
+		@media (max-width: $mobile) {
+			font-size: toRem(24);
+		}
+	}
+
+	&__body-main {
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		gap: toRem(20);
+		min-height: toRem(60);
+
+		@media (min-width: $mobile) {
+			@include adaptiveValue('padding-right', 165, 50, 0, $containerWidth, 768);
+			border-right: toRem(1) solid $accentColor;
+		}
+	}
+
+	&__social-item {
+		svg {
+			fill: transparent;
+			transition: fill 0.3s ease;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				svg {
+					fill: $accentColor;
+				}
+			}
+		}
+	}
+
+	&__copy {
+	}
+}
+
+.footer-body-main {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: toRem(20);
+	min-height: toRem(60);
+	text-align: right;
+
+	@media (max-width: $mobile) {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	&__text {
+		max-width: toRem(480);
+	}
+}
+
+.footer-copy {
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: toRem(20);
+		@include adaptiveValue('padding-top', 50, 15);
+		@include adaptiveValue('padding-bottom', 50, 15);
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
+	&__text {
+	}
+
+	&__list {
+	}
+}
+.footer-copy-list {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: toRem(20) toRem(90);
+
+	@media (max-width: $mobile) {
+		gap: toRem(20) toRem(40);
+	}
+
+	&__item {
+	}
+
+	&__link {
+		color: $accentColor;
+		font-family: $titleFontFamily, sans-serif;
+		line-height: normal;
+		letter-spacing: toRem(6.88);
+
+		@media (any-hover: hover) {
+			transition: color 0.3s ease-in-out;
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}

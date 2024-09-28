@@ -1,0 +1,18 @@
+//<FORM>
+// Сніппет (HTML):
+.form {
+	&__row {
+	}
+	&__column {
+	}
+	&__line {
+	}
+	&__input {
+	}
+	&__button {
+	}
+	&__error {
+		padding: toRem(10);
+		color: rgb(155, 28, 28);
+	}
+}

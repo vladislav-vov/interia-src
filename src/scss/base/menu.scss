@@ -1,0 +1,137 @@
+.menu {
+	&__icon {
+	}
+	&__body {
+		@media (max-width: $mobile) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			left: -100%;
+			top: 0;
+			overflow: auto;
+			padding: toRem(100) toRem(15) toRem(40) toRem(15);
+			background-color: $mainBg;
+			transition: left 0.3s;
+			&::before {
+				content: '';
+				position: fixed;
+				width: 100%;
+				height: toRem(70);
+				left: -100%;
+				top: 0;
+				transition: left 0.3s;
+				z-index: 2;
+			}
+			.menu-open & {
+				left: 0;
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
+	&__list {
+		text-align: center;
+
+		@media (min-width: $mobile) {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			row-gap: toRem(20);
+			@include adaptiveValue('column-gap', 55, 30, 0, $containerWidth, 992);
+		}
+
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(30);
+			}
+		}
+	}
+	&__item {
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
+		}
+	}
+	&__link {
+		position: relative;
+
+		@media (any-hover: hover) {
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 0%;
+				height: 2px;
+				border-radius: 2px;
+				background-color: #fff;
+				transition: all 0.3s ease-in-out;
+			}
+
+			&:hover {
+				&::after {
+					left: 0;
+					right: auto;
+					width: 100%;
+				}
+			}
+		}
+
+		@media (max-width: $mobile) {
+			padding: toRem(10) toRem(40);
+			font-size: toRem(30);
+		}
+	}
+}
+
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: toRem(30);
+		height: toRem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: '';
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			background-color: #fff;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - toRem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - toRem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

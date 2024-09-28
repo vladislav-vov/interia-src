@@ -1,0 +1,22 @@
+@import './mixins';
+
+$fontFamily: 'Nunito';
+$titleFontFamily: 'Kanit';
+$fontSize: toRem(16);
+
+$textColor: #fff;
+$mainBg: #191d1d;
+$accentColor: #6d7d7d;
+$darkColor: #131616;
+
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1170;
+$containerPadding: 30;
+
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$pc: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);

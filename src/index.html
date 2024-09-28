@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="hero">
+				<div class="hero__img">
+					<img src="@img/hero/bg.jpg" alt="Background image">
+				</div>
+				<div class="hero__container">
+					<div class="hero__body">
+						<div class="hero__swipe">SWIPE DOWN</div>
+						<div class="hero__content">
+							<div class="hero__header-block header-block">
+								<h1 class="header-block__title title">We design your room aesthetic</h1>
+								<div class="header-block__text">
+									<p>
+										Lectus quam id leo in vitae turpis nisi porta lorem mollis.
+									</p>
+								</div>
+							</div>
+							<button class="hero__play">
+								<svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="34.5" cy="34.5" r="34" stroke="#6D7D7D" />
+									<path
+										d="M47.25 32.8349C48.9167 33.7972 48.9167 36.2028 47.25 37.1651L30.75 46.6913C29.0833 47.6536 27 46.4508 27 44.5263L27 25.4737C27 23.5492 29.0833 22.3464 30.75 23.3087L47.25 32.8349Z"
+										stroke="white" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="about section">
+				<div class="about__container">
+					<div class="about__head header-block">
+						<div class="header-block__label">ABOUT</div>
+						<h1 class="header-block__title title">We are the best interior design studio in london</h1>
+						<div class="about__head-text header-block__text">
+							<p>
+								Posuere urna nec tincidunt praesent. Egestas maecenas pharetra convallis posuere. Ipsum nunc aliquet
+								bibendum enim. Sem integer vitae justo eget magna fermentum iaculis eu non.
+							</p>
+						</div>
+					</div>
+					<div class="about__body">
+						<div class="about__media-img">
+							<img src="@img/about/1.jpg" alt="">
+						</div>
+						<div class="about__media-img">
+							<img src="@img/about/2.jpg" alt="">
+						</div>
+						<div class="about__media-img">
+							<img src="@img/about/3.jpg" alt="">
+						</div>
+						<div class="about__btn-wrapper">
+							<a href="#" class="about__btn button">LEARN ABOUT</a>
+						</div>
+						<div class="about__items-counters">
+							<div class="about__items-counter about-items-counter">
+								<div class="about-items-counter__value">2K+</div>
+								<div class="about-items-counter__descr">PROJECTS DONE</div>
+							</div>
+							<div class="about__items-counter about-items-counter">
+								<div class="about-items-counter__value">20+</div>
+								<div class="about-items-counter__descr">PRO TEAMS</div>
+							</div>
+							<div class="about__items-counter about-items-counter">
+								<div class="about-items-counter__value">300+</div>
+								<div class="about-items-counter__descr">GLOBAL CLIENTS</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="hire section">
+				<div class="hire__container">
+					<div class="hire__body">
+						<div class="hire__img">
+							<img src="@img/hire/design.png" alt="">
+						</div>
+						<div class="hire__content header-block">
+							<h1 class="header-block__title title">Blending creativity and functionality in every design</h1>
+							<div class="hire__content-actions header-block__actions">
+								<a href="#" class="button">HIRE US NOW</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="team">
+				<div class="team__container">
+					<div class="team__content">
+						<div class="team__head header-block">
+							<div class="header-block__label">TEAMS</div>
+							<h1 class="header-block__title title">Projects are handled by professional certified teams</h1>
+							<div class="header-block__text">
+								<p>
+									Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet
+									bibendum enim consectetur adipiscing.
+								</p>
+							</div>
+						</div>
+						<div class="team__reviews team-reviews">
+							<div class="team-reviews__avatars">
+								<div class="team-reviews__avatar">
+									<img src="@img/team/avatars/1.jpg" alt="Avatar">
+								</div>
+								<div class="team-reviews__avatar">
+									<img src="@img/team/avatars/2.jpg" alt="Avatar">
+								</div>
+								<div class="team-reviews__avatar">
+									<img src="@img/team/avatars/3.jpg" alt="Avatar">
+								</div>
+								<div class="team-reviews__avatar">
+									<img src="@img/team/avatars/4.jpg" alt="Avatar">
+								</div>
+							</div>
+							<div class="team__rating rating">
+								<div class="rating__body">
+									<div class="rating__active"></div>
+									<div class="rating__items">
+										<input type="radio" class="rating__item" value="1" name="rating">
+										<input type="radio" class="rating__item" value="2" name="rating">
+										<input type="radio" class="rating__item" value="3" name="rating">
+										<input type="radio" class="rating__item" value="4" name="rating">
+										<input type="radio" class="rating__item" value="5" name="rating">
+									</div>
+								</div>
+								<div class="rating__value">(<span>4.5</span> reviews)</div>
+							</div>
+							<div class="team-reviews__label">TRUSTED BY CUSTOMERS</div>
+						</div>
+					</div>
+					<div class="team__items">
+						<div class="team__item">
+							<img class="team__img" src="@img/team/1.jpg" alt="Image">
+						</div>
+						<div class="team__item">
+							<img class="team__img" src="@img/team/2.jpg" alt="Image">
+						</div>
+						<div class="team__item">
+							<img class="team__img" src="@img/team/3.jpg" alt="Image">
+						</div>
+						<div class="team__btn">
+							<a href="#" class="button">LEARN TEAMS</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="partners">
+				<div class="partners__container">
+					<div class="partners__img">
+						<img src="@img/partners/1.svg" alt="">
+					</div>
+					<div class="partners__img">
+						<img src="@img/partners/2.svg" alt="">
+					</div>
+					<div class="partners__img">
+						<img src="@img/partners/3.svg" alt="">
+					</div>
+					<div class="partners__img">
+						<img src="@img/partners/4.svg" alt="">
+					</div>
+				</div>
+			</div>
+			<section class="work section">
+				<div class="work__container">
+					<div class="work__items">
+						<div class="work__item">
+							<h2 class="work__item-title title">01. Interior design</h2>
+							<div class="work__item-content">
+								<div class="work__item-text">
+									<p>Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet
+										bibendum enim consectetur adipiscing.</p>
+								</div>
+								<a href="#" class="work__item-link section-link">LEARN MORE</a>
+							</div>
+						</div>
+						<div class="work__item">
+							<h2 class="work__item-title title">02. Furniture design</h2>
+							<div class="work__item-content">
+								<div class="work__item-text">
+									<p>Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet
+										bibendum enim consectetur adipiscing.</p>
+								</div>
+								<a href="#" class="work__item-link section-link">LEARN MORE</a>
+							</div>
+						</div>
+						<div class="work__item">
+							<h2 class="work__item-title title">03. Landscape design</h2>
+							<div class="work__item-content">
+								<div class="work__item-text">
+									<p>Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet
+										bibendum enim consectetur adipiscing.</p>
+								</div>
+								<a href="#" class="work__item-link section-link">LEARN MORE</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="gallery section">
+				<div class="gallery__items">
+					<a href="#" class="gallery__item">
+						<img src="@img/gallery/1.jpg" alt="Image">
+					</a>
+					<a href="#" class="gallery__item">
+						<img src="@img/gallery/2.jpg" alt="Image">
+					</a>
+					<a href="#" class="gallery__item">
+						<img src="@img/gallery/3.jpg" alt="Image">
+					</a>
+					<a href="#" class="gallery__item">
+						<img src="@img/gallery/4.jpg" alt="Image">
+					</a>
+				</div>
+			</div>
+			<section class="blog section">
+				<div class="blog__container">
+					<div class="blog__head header-block">
+						<div class="header-block__label">BLOG</div>
+						<h1 class="header-block__title title">The latest article</h1>
+					</div>
+					<div class="blog__items">
+						<div class="blog__item blog-item">
+							<a href="#" class="blog-item__img">
+								<img src="@img/blog/1.jpg" alt="Image">
+							</a>
+							<div class="blog-item__content">
+								<div class="blog-item__text">
+									<p>Posuere urna nec tincidunt praesent egestas maecenas.</p>
+								</div>
+								<a href="#" class="section-link">LEARN MORE</a>
+							</div>
+						</div>
+						<div class="blog__item blog-item">
+							<a href="#" class="blog-item__img">
+								<img src="@img/blog/2.jpg" alt="Image">
+							</a>
+							<div class="blog-item__content">
+								<div class="blog-item__text">
+									<p>Posuere urna nec tincidunt praesent egestas maecenas.</p>
+								</div>
+								<a href="#" class="section-link">LEARN MORE</a>
+							</div>
+						</div>
+						<div class="blog__item blog-item">
+							<a href="#" class="blog-item__img">
+								<img src="@img/blog/3.jpg" alt="Image">
+							</a>
+							<div class="blog-item__content">
+								<div class="blog-item__text">
+									<p>Posuere urna nec tincidunt praesent egestas maecenas.</p>
+								</div>
+								<a href="#" class="section-link">LEARN MORE</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="subscribe section">
+				<div class="subscribe__container">
+					<div class="subscribe__inner">
+						<h2 class="subscribe__title title">Newsletter</h2>
+						<form data-dev action="#" method="POST" class="subscribe__form subscribe-form">
+							<div class="subscribe-form__field">
+								<input data-error="Invalid email entered" data-required="email" name="email" type="text"
+									class="subscribe-form__input" placeholder="Enter your email">
+							</div>
+							<button type="submit" class="subscribe-form__btn button">SUBSCRIBE</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
+
+<!-- 
+	<button class="button">GET STARTED</button>
+	<div class="header-block">
+		<div class="header-block__label"></div>
+		<h1 class="header-block__title title"></h1>
+		<div class="header-block__text">
+			<p></p>
+		</div>
+	</div>
+ -->

@@ -1,0 +1,36 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: toRem(20);
+		padding-top: toRem(30);
+		padding-bottom: toRem(30);
+
+		@media (max-width: $mobile) {
+			padding-top: toRem(20);
+			padding-bottom: toRem(20);
+		}
+	}
+
+	&__logo {
+	}
+
+	&__menu {
+	}
+
+	&__actions {
+		@media (max-width: $mobile) {
+			text-align: center;
+		}
+	}
+
+	&__actions-btn {
+	}
+}
